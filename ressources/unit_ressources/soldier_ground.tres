@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitResource" load_steps=2 format=3 uid="uid://brbgallnmhxjx"]
+
+[ext_resource type="Script" path="res://script/unit_ressource.gd" id="1_85pk3"]
+
+[resource]
+resource_name = "soldier"
+script = ExtResource("1_85pk3")
+name = "soldier"
+damage = 3
+health = 10
+cost = 100
+type = "ground"
+direction = Vector2(1, 0)
+speed = 200
+range_distance = 70

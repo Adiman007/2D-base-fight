@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://d3653lpas23lb"]
+
+[ext_resource type="Script" path="res://script/base.gd" id="1_bqfxo"]
+[ext_resource type="Script" path="res://script/random_timer.gd" id="2_2sj0m"]
+[ext_resource type="Texture2D" uid="uid://urqp2wdca3pa" path="res://icon.svg" id="3_7muk7"]
+[ext_resource type="Script" path="res://script/Button_test.gd" id="4_j7awl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l4tq3"]
+size = Vector2(128, 128)
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_5bpaa"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vxkvq"]
+texture = SubResource("AnimatedTexture_5bpaa")
+
+[node name="basetest" type="Area2D"]
+script = ExtResource("1_bqfxo")
+
+[node name="MoneyTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+script = ExtResource("2_2sj0m")
+min_time = 5.0
+max_time = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9.53675e-07)
+shape = SubResource("RectangleShape2D_l4tq3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_7muk7")
+
+[node name="TestButton" type="Button" parent="."]
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 9.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_vxkvq")
+script = ExtResource("4_j7awl")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UnitResource" load_steps=2 format=3 uid="uid://dy3qp5ow4oo75"]
+
+[ext_resource type="Script" path="res://script/unit_ressource.gd" id="1_v0afp"]
+
+[resource]
+script = ExtResource("1_v0afp")
+damage = 0
+health = 0
+cost = 0
+type = ""

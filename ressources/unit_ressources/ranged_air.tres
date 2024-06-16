@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitResource" load_steps=2 format=3 uid="uid://bqtkoqhlarljm"]
+
+[ext_resource type="Script" path="res://script/unit_ressource.gd" id="1_npmeu"]
+
+[resource]
+resource_name = "ranged"
+script = ExtResource("1_npmeu")
+name = "ranged"
+damage = 10
+health = 5
+cost = 150
+type = "ground"
+direction = Vector2(1, 0)
+speed = 150
+range_distance = 300

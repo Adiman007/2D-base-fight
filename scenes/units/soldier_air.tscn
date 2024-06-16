@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://d113bn2xf3itc"]
+
+[ext_resource type="Script" path="res://script/soldier.gd" id="1_i0asq"]
+[ext_resource type="Texture2D" uid="uid://bn7i8rh2pb32d" path="res://asset/Basic Humanoid Sprites 4x.png" id="2_qht48"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_byxu3"]
+size = Vector2(80, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_th4ka"]
+size = Vector2(99.8111, 111.466)
+
+[node name="soldier" type="CharacterBody2D"]
+script = ExtResource("1_i0asq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_byxu3")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-9.53674e-07, -5.72205e-06)
+scale = Vector2(1.29032, 1.21212)
+texture = ExtResource("2_qht48")
+region_enabled = true
+region_rect = Rect2(6, 9, 62, 66)
+region_filter_clip_enabled = true
+
+[node name="attack_range" type="Area2D" parent="Icon"]
+position = Vector2(71.2796, 0.590165)
+scale = Vector2(0.559056, 0.590165)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon/attack_range"]
+position = Vector2(-22.1438, -0.999992)
+shape = SubResource("RectangleShape2D_th4ka")
+
+[node name="LifeBar" type="ProgressBar" parent="."]
+offset_right = 4.0
+offset_bottom = 27.0
+max_value = 500.0

@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://cak7dvl143snj"]
+
+[ext_resource type="Script" path="res://script/base.gd" id="1_syat4"]
+[ext_resource type="Texture2D" uid="uid://urqp2wdca3pa" path="res://icon.svg" id="1_x7elu"]
+[ext_resource type="Script" path="res://script/random_timer.gd" id="3_nnpsj"]
+[ext_resource type="Script" path="res://script/Button_test.gd" id="4_e32ob"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3yat"]
+size = Vector2(122, 124)
+
+[node name="base" type="Sprite2D"]
+position = Vector2(-3, -2)
+texture = ExtResource("1_x7elu")
+script = ExtResource("1_syat4")
+player = null
+base_health = null
+base_money = null
+current_health = null
+current_money = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_h3yat")
+
+[node name="MoneyTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+script = ExtResource("3_nnpsj")
+min_time = 5.0
+max_time = 5.0
+
+[node name="TestButton" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("4_e32ob")

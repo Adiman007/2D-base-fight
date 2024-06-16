@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitResource" load_steps=2 format=3 uid="uid://b142dndtg0avd"]
+
+[ext_resource type="Script" path="res://script/unit_ressource.gd" id="1_irinj"]
+
+[resource]
+resource_name = "tank"
+script = ExtResource("1_irinj")
+name = "tank"
+damage = 5
+health = 50
+cost = 300
+type = "ground"
+direction = Vector2(1, 0)
+speed = 100
+range_distance = 70

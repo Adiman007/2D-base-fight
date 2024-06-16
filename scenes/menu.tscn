@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6nwdvynls0k8"]
+
+[ext_resource type="Script" path="res://script/menu_control.gd" id="1_pqt8t"]
+
+[node name="menu" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_pqt8t")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -11.0
+offset_top = -2.0
+offset_right = 1158.0
+offset_bottom = 645.0
+color = Color(0.404511, 0.404511, 0.404511, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 519.0
+offset_top = 45.0
+offset_right = 660.0
+offset_bottom = 85.0
+grow_vertical = 0
+text = "THIS GAME"
+tab_size = 7
+metadata/_edit_use_anchors_ = true
+
+[node name="StartButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 176.0
+offset_right = 868.0
+offset_bottom = 332.0
+text = "NEW GAME "
+metadata/_edit_use_anchors_ = true
+
+[node name="QuitButton" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 283.0
+offset_top = 379.0
+offset_right = 832.0
+offset_bottom = 506.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,124 @@
+[gd_scene load_steps=7 format=3 uid="uid://demvjyst63y33"]
+
+[ext_resource type="Script" path="res://script/HUD.gd" id="1_k3voc"]
+[ext_resource type="Texture2D" uid="uid://du3ilth6hnj1t" path="res://asset/red-heart-icon.svg" id="2_3msg6"]
+[ext_resource type="Texture2D" uid="uid://dwn1f7x513vll" path="res://asset/us-dollar-coin-color-icon.svg" id="3_7ufqc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dnems"]
+bg_color = Color(0.219145, 0.703075, 0.428439, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tgpfh"]
+bg_color = Color(0.380388, 0.585931, 0.991162, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hthi7"]
+bg_color = Color(0.299547, 0.299547, 0.299547, 1)
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_k3voc")
+
+[node name="ButtonUnit1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 672.0
+offset_right = 80.0
+offset_bottom = 703.0
+text = "UNIT 1
+"
+
+[node name="ButtonUnit2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 672.0
+offset_right = 168.0
+offset_bottom = 703.0
+text = "UNIT 2
+"
+
+[node name="ButtonUnit3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 672.0
+offset_right = 256.0
+offset_bottom = 703.0
+text = "UNIT 3
+"
+
+[node name="buttonSpawnerGround" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 8.627
+anchor_top = 12.339
+anchor_right = 8.627
+anchor_bottom = 12.339
+offset_left = 46.92
+offset_top = 178.44
+offset_right = 118.92
+offset_bottom = 209.44
+theme_override_styles/normal = SubResource("StyleBoxFlat_dnems")
+text = "Ground
+"
+
+[node name="ButtonSpawnerWater" type="Button" parent="."]
+offset_left = 480.0
+offset_top = 672.0
+offset_right = 552.0
+offset_bottom = 703.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_tgpfh")
+text = "Water"
+
+[node name="ButtonSpawnerAir" type="Button" parent="."]
+offset_left = 568.0
+offset_top = 672.0
+offset_right = 640.0
+offset_bottom = 703.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_hthi7")
+text = "Aerial"
+
+[node name="MoneyLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.287
+anchor_right = 1.0
+anchor_bottom = 0.287
+offset_left = 197.0
+offset_top = 10.52
+offset_right = 220.0
+offset_bottom = 33.52
+text = "ARGENT
+"
+
+[node name="HealthLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 60.375
+offset_top = 2.375
+offset_right = 91.375
+offset_bottom = 26.375
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Red-heart-icon" type="Sprite2D" parent="."]
+position = Vector2(55.375, 35.375)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_3msg6")
+
+[node name="Us-dollar-coin-color-icon" type="Sprite2D" parent="."]
+position = Vector2(173, 35)
+scale = Vector2(0.236535, 0.236535)
+texture = ExtResource("3_7ufqc")

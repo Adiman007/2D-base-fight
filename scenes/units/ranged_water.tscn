@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://bl6o45jt8fkvo"]
+
+[ext_resource type="Script" path="res://script/ranged.gd" id="1_qemoa"]
+[ext_resource type="Texture2D" uid="uid://bn7i8rh2pb32d" path="res://asset/Basic Humanoid Sprites 4x.png" id="2_0araf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_byxu3"]
+size = Vector2(112, 112)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7abao"]
+size = Vector2(320.652, 113.527)
+
+[node name="ranged_ground" type="CharacterBody2D"]
+script = ExtResource("1_qemoa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_byxu3")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-4.76837e-07, 5.63264e-06)
+scale = Vector2(1.69697, 1.67164)
+texture = ExtResource("2_0araf")
+region_enabled = true
+region_rect = Rect2(3, 149, 66, 67)
+region_filter_clip_enabled = true
+
+[node name="attack_range" type="Area2D" parent="Icon"]
+position = Vector2(71.2796, 0.590165)
+scale = Vector2(0.559056, 0.590165)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon/attack_range"]
+position = Vector2(91.6404, -1)
+shape = SubResource("RectangleShape2D_7abao")
+
+[node name="LifeBar" type="ProgressBar" parent="."]
+offset_right = 4.0
+offset_bottom = 27.0
+max_value = 500.0
